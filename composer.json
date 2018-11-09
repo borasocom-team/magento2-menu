@@ -3,6 +3,7 @@
   "description": "Provides powerful menu editor to replace category based menus in Magento 2",
   "license": "MIT",
   "type": "magento2-module",
+  "version": "2.8.1",
   "authors": [
     {
       "name": "Kamil Balwierz",
