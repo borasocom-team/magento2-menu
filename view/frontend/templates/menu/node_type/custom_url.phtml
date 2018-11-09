@@ -18,6 +18,6 @@ if ($block->getTarget()) {
     $attributes[] = 'target="__blank" rel="noopener"';
 }
 ?>
-<a href="<?= $block->getContent() ?>" <?= implode(' ', $attributes) ?>>
-    <?= $title ?>
+<a href="<?php echo $block->getContent() ?>" <?php echo implode(' ', $attributes) ?>>
+    <?php echo $title ?>
 </a>
