@@ -37,42 +37,43 @@ foreach ($block->getNodeForms() as $form) {
             "vue!Snowdog_Menu/vue/menu-type/cms-block",
             "vue!Snowdog_Menu/vue/menu-type/custom-url",
             "vue!Snowdog_Menu/vue/menu-type/product",
+            "vue!Snowdog_Menu/vue/menu-type/aggregator",
             "vue!Snowdog_Menu/vue/field-type/simple",
             "vue!Snowdog_Menu/vue/field-type/autocomplete"
-        ], function(Vue, Vddl, vueSelect) {
+        ], function (Vue, Vddl, vueSelect) {
             Vue.use(Vddl);
             Vue.component('v-select', vueSelect.VueSelect);
             var app = new Vue({
-                el  : "#snowdog_menu",
+                el: "#snowdog_menu",
                 data: {
-                    list  : <?php echo json_encode($block->renderNodes()) ?>,
+                    list: <?php echo json_encode($block->renderNodes()) ?>,
                     config: {
-                        fieldData  : <?php echo json_encode($fieldData) ?>,
-                        nodeTypes  : <?php echo json_encode($block->getNodeLabels()) ?>,
+                        fieldData: <?php echo json_encode($fieldData) ?>,
+                        nodeTypes: <?php echo json_encode($block->getNodeLabels()) ?>,
                         translation: {
-                            nodes          : "<?php echo __('Nodes') ?>",
-                            click          : "<?php echo __('Click') ?>",
+                            nodes: "<?php echo __('Nodes') ?>",
+                            click: "<?php echo __('Click') ?>",
                             createFirstNode: "<?php echo __('to create your first node.') ?>",
-                            createSubNode  : "<?php echo __('to create sub node or drag and drop other nodes here.') ?>",
-                            append         : "<?php echo __('Append') ?>",
-                            edit           : "<?php echo __('Edit') ?>",
-                            delete         : "<?php echo __('Delete') ?>",
-                            addNode        : "<?php echo __('New node') ?>",
-                            nodeType       : "<?php echo __('Node Type') ?>",
-                            nodeName       : "<?php echo __('Node name') ?>",
-                            nodeClasses    : "<?php echo __('Node CSS classes') ?>",
-                            selectNodeType : "<?php echo __('Select Node Type') ?>",
-                            pleaseSelect   : "<?php echo __('Please select a') ?>",
-                            targetLabel    : "<?php echo __('Node target blank') ?>",
-                            category       : "<?php echo __('Category') ?>",
-                            categoryId     : "<?php echo __('Category ID') ?>",
-                            block          : "<?php echo __('Block') ?>",
-                            blockId        : "<?php echo __('Block ID') ?>",
-                            page           : "<?php echo __('Page') ?>",
-                            pageId         : "<?php echo __('Page URL key') ?>",
-                            customURL      : "<?php echo __('Custom URL') ?>",
-                            product        : "<?php echo __('Product') ?>",
-                            productId      : "<?php echo __('Product ID') ?>"
+                            createSubNode: "<?php echo __('to create sub node or drag and drop other nodes here.') ?>",
+                            append: "<?php echo __('Append') ?>",
+                            edit: "<?php echo __('Edit') ?>",
+                            delete: "<?php echo __('Delete') ?>",
+                            addNode: "<?php echo __('New node') ?>",
+                            nodeType: "<?php echo __('Node Type') ?>",
+                            nodeName: "<?php echo __('Node name') ?>",
+                            nodeClasses: "<?php echo __('Node CSS classes') ?>",
+                            selectNodeType: "<?php echo __('Select Node Type') ?>",
+                            pleaseSelect: "<?php echo __('Please select a') ?>",
+                            targetLabel: "<?php echo __('Node target blank') ?>",
+                            category: "<?php echo __('Category') ?>",
+                            categoryId: "<?php echo __('Category ID') ?>",
+                            block: "<?php echo __('Block') ?>",
+                            blockId: "<?php echo __('Block ID') ?>",
+                            page: "<?php echo __('Page') ?>",
+                            pageId: "<?php echo __('Page URL key') ?>",
+                            customURL: "<?php echo __('Custom URL') ?>",
+                            product: "<?php echo __('Product') ?>",
+                            productId: "<?php echo __('Product ID') ?>"
                         }
                     }
                 }
