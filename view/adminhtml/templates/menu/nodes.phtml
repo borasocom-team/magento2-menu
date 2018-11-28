@@ -32,6 +32,7 @@ foreach ($block->getNodeForms() as $form) {
             "vue!Snowdog_Menu/vue/app",
             "vue!Snowdog_Menu/vue/nested-list",
             "vue!Snowdog_Menu/vue/menu-type",
+            "vue!Snowdog_Menu/vue/menu-type/category-price-filtered",
             "vue!Snowdog_Menu/vue/menu-type/category",
             "vue!Snowdog_Menu/vue/menu-type/cms-page",
             "vue!Snowdog_Menu/vue/menu-type/cms-block",
@@ -73,7 +74,8 @@ foreach ($block->getNodeForms() as $form) {
                             pageId: "<?php echo __('Page URL key') ?>",
                             customURL: "<?php echo __('Custom URL') ?>",
                             product: "<?php echo __('Product') ?>",
-                            productId: "<?php echo __('Product ID') ?>"
+                            productId: "<?php echo __('Product ID') ?>",
+                            aggregator: "<?php echo __('Aggregator') ?>"
                         }
                     }
                 }

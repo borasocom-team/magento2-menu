@@ -20,8 +20,11 @@ class Aggregator extends AbstractNode
      */
     public function getJsonConfig()
     {
-        $data = 'aggregator';
-
+        $data = [
+            "snowMenuSimpleField" => [
+                "type" => "aggregator"
+            ]
+        ];
         return $data;
     }
 
