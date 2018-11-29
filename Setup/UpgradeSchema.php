@@ -44,6 +44,10 @@ class UpgradeSchema implements UpgradeSchemaInterface
             $this->addForeignKeys($setup);
         }
 
+        if (version_compare($context->getVersion(), '0.2.4', '<')) {
+            $this->addMinMaxAttributes($setup);
+        }
+
         $setup->endSetup();
     }
 
@@ -196,5 +200,32 @@ class UpgradeSchema implements UpgradeSchemaInterface
             'store_id',
             Table::ACTION_CASCADE
         );
+    }
+
+    private function addMinMaxAttributes(SchemaSetupInterface $setup)
+    {
+        $setup->getConnection()->addColumn(
+            $setup->getTable('snowmenu_node'),
+            'max',
+            [
+                'type' => Table::TYPE_SMALLINT,
+                'nullable' => true,
+                'after' => 'target',
+                'comment' => 'Max attribute',
+            ]
+        );
+
+        $setup->getConnection()->addColumn(
+            $setup->getTable('snowmenu_node'),
+            'min',
+            [
+                'type' => Table::TYPE_SMALLINT,
+                'nullable' => true,
+                'after' => 'target',
+                'comment' => 'Min attribute',
+            ]
+        );
+
+        return $this;
     }
 }

@@ -8,6 +8,20 @@
                 :config="config"
         >
         </auto-complete>
+        <simple-field
+                :label="config.translation.min_price"
+                id="min_price"
+                type="text"
+                v-model="item.min"
+        >
+        </simple-field>
+        <simple-field
+                :label="config.translation.max_price"
+                id="max_price"
+                type="text"
+                v-model="item.max"
+        >
+        </simple-field>
     </div>
 </template>
 <script>
