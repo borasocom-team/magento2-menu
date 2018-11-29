@@ -21,6 +21,7 @@ if ($block->getIsViewAllLink()) {
         $classLink .= ' current';
     }
 }
+$categoryUrl .= '?price=' . $block->getMin() . '-' . $block->getMax();
 ?>
 <a href="<?php echo $categoryUrl ?>"
    class="<?php echo $classLink ?>"<?php echo $dataAttribute ?>
