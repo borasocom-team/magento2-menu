@@ -16,6 +16,8 @@ interface NodeInterface
     const LEVEL = 'level';
     const TITLE = 'title';
     const TARGET = 'target';
+    const MIN = 'min';
+    const MAX = 'max';
     const CREATION_TIME = 'creation_time';
     const UPDATE_TIME = 'update_time';
     const IS_ACTIVE = 'is_active';
@@ -169,6 +171,36 @@ interface NodeInterface
      * @return $this
      */
     public function setTarget($target);
+
+    /**
+     * Get min
+     *
+     * @return int
+     */
+    public function getMin();
+
+    /**
+     * Set min
+     *
+     * @param int $min
+     * @return $this
+     */
+    public function setMin($min);
+
+    /**
+     * Get max
+     *
+     * @return int
+     */
+    public function getMax();
+
+    /**
+     * Set max
+     *
+     * @param int $max
+     * @return $this
+     */
+    public function setMax($max);
 
     /**
      * Get creation time

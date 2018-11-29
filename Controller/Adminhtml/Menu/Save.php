@@ -184,6 +184,12 @@ class Save extends Action
                     if (isset($node['target'])) {
                         $nodeObject->setTarget($node['target']);
                     }
+                    if (isset($node['min'])) {
+                        $nodeObject->setMin($node['min']);
+                    }
+                    if (isset($node['max'])) {
+                        $nodeObject->setMax($node['max']);
+                    }
                     $nodeObject->setMenuId($id);
                     $nodeObject->setTitle($node['title']);
                     $nodeObject->setIsActive(1);

@@ -185,6 +185,38 @@ class Node extends AbstractModel implements NodeInterface, IdentityInterface
     /**
      * @inheritdoc
      */
+    public function getMax()
+    {
+        return $this->_getData(NodeInterface::MAX);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function setMax($max)
+    {
+        return $this->setData(NodeInterface::MAX, $max);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getMin()
+    {
+        return $this->_getData(NodeInterface::MIN);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function setMin($min)
+    {
+        return $this->setData(NodeInterface::MIN, $min);
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function getCreationTime()
     {
         return $this->_getData(NodeInterface::CREATION_TIME);
