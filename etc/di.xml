@@ -16,6 +16,7 @@
                 <item name="custom_url" xsi:type="object">Snowdog\Menu\Block\NodeType\CustomUrl</item>
                 <item name="aggregator" xsi:type="object">Snowdog\Menu\Block\NodeType\Aggregator</item>
                 <item name="category_price_filtered" xsi:type="object">Snowdog\Menu\Block\NodeType\CategoryPriceFiltered</item>
+                <item name="brand" xsi:type="object">Snowdog\Menu\Block\NodeType\Brand</item>
             </argument>
         </arguments>
     </type>

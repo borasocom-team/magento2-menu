@@ -1,0 +1,29 @@
+<?php /** @var \Snowdog\Menu\Block\NodeType\Brand $block */ ?>
+<?php
+$nodeId = $block->getId();
+$class = $block->getMenuClass();
+$brandUrl = $block->getBrandUrl($nodeId);
+$brandUrl = $brandUrl ?: '#';
+$dataAttribute = '';
+
+if ($block->getIsViewAllLink()) {
+    $title = __('View All');
+    $classLink = $class . '__inner-link';
+} else {
+    $classLink = $block->getIsRoot() ? $class . '__link' : $class . '__inner-link';
+    $title = $block->getTitle();
+
+    if ($nodeId) {
+        $dataAttribute = ' data-menu="menu-' . $nodeId . '"';
+    }
+
+    if ($block->isCurrentBrand($nodeId)) {
+        $classLink .= ' current';
+    }
+}
+?>
+<a href="<?php echo $brandUrl ?>"
+   class="<?php echo $classLink ?>"<?php echo $dataAttribute ?>
+>
+    <?php echo $title ?>
+</a>
